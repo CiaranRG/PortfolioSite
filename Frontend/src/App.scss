@@ -1,0 +1,34 @@
+// Importing Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// CSS RESET
+* {
+  // Includes padding and border in size calculation
+  box-sizing: border-box;
+  // Prevents grid and flex items from spilling out of the containers
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  // Ensures the body fills the entire viewport
+  min-height: 100dvh;
+  // background: rgb(29, 29, 29);
+  background: white;
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+// Doing this allows me to change just this here and it will change each individual thing instead of going one by one
+$main-font: 'Inter', sans-serif;
