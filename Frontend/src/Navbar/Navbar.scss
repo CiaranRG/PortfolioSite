@@ -1,0 +1,24 @@
+@import '../App.scss';
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: $nav-height;
+    width: 100vw;
+    padding: 0px;
+    background-color: $color5;
+    .leftNav{
+        display: flex;
+        justify-content: flex-start;
+        width: 50%;
+        padding: 0px 0px 0px 10px;
+    }
+    .rightNav{
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
+        padding: 0px 10px 0px 0px;
+    }
+}

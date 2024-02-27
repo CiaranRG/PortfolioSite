@@ -1,10 +1,19 @@
 import './App.scss'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
+import Navbar from './Navbar/Navbar'
+import MainPage from './MainPage/MainPage'
 
 function App() {
 
   return (
     <>
-    <h1>Portfolio Site</h1>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<MainPage/>}/>
+        </Routes>
+      </Router>
     </>
   )
 }

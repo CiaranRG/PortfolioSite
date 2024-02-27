@@ -1,0 +1,6 @@
+@import '../App.scss';
+
+.mainPageContent{
+    @include flex-center;
+    @include main-content;
+}

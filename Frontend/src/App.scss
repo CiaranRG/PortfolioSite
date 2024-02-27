@@ -15,8 +15,9 @@ body {
   // Ensures the body fills the entire viewport
   min-height: 100dvh;
   // background: rgb(29, 29, 29);
-  background: white;
+  background: rgb(35, 35, 35);
   font-family: 'Inter', sans-serif;
+  color: rgb(255, 255, 255);
 }
 
 h1,
@@ -32,3 +33,28 @@ p {
 
 // Doing this allows me to change just this here and it will change each individual thing instead of going one by one
 $main-font: 'Inter', sans-serif;
+
+// Setting a nav height
+$nav-height: 5vh;
+
+// Setting colors
+$color1: rgb(35, 35, 35);
+$color2: rgb(60, 110, 113);
+$color3: rgb(255, 255, 255);
+$color4: rgb(217, 217, 217);
+$color5: rgb(40, 75, 99);
+
+$font-color: $color3;
+
+// We can include this property in other pages to center things fast
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+@mixin main-content {
+  height: calc(100vh - $nav-height);
+  width: 100vw;
+}
