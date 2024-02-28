@@ -2,6 +2,7 @@ import './Navbar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     // State to hold if the burger nav is open or closed
@@ -23,7 +24,10 @@ export default function Navbar() {
                 </div>
                 {isNavOpen && (
                 <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
-                    <a href="">Home</a>
+                    <Link to={'/SectionOne'}>Home</Link>
+                    <Link to={'/SectionOne'}>Projects</Link>
+                    <Link to={'/SectionOne'}>Contact</Link>
+                    <Link to={'/SectionOne'}>About</Link>
                 </div>
             )}
             </div>
