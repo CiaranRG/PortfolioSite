@@ -8,7 +8,9 @@ nav {
     height: $nav-height;
     width: 100vw;
     padding: 0px;
-    background-color: $color5;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-bottom: 2px solid white;
     .leftNav{
         display: flex;
         justify-content: flex-start;
@@ -20,5 +22,12 @@ nav {
         justify-content: flex-end;
         width: 50%;
         padding: 0px 10px 0px 0px;
+        .navBurgerIcon{
+            margin-top: 1px;
+            padding-left: 8px;
+        }
+        .navBurgerIcon:hover{
+            cursor: pointer;
+        }
     }
 }
