@@ -18,18 +18,17 @@ export default function Navbar() {
                 <a>Portfolio</a>
             </div>
             <div className='rightNav'>
-                {/* <p>Menus</p> */}
                 <div className='navBurgerIcon' onClick={openNav}>
                     <FontAwesomeIcon icon={faBars} />
                 </div>
                 {isNavOpen && (
-                <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
-                    <Link to={'/SectionOne'}>Home</Link>
-                    <Link to={'/SectionOne'}>Projects</Link>
-                    <Link to={'/SectionOne'}>Contact</Link>
-                    <Link to={'/SectionOne'}>About</Link>
-                </div>
-            )}
+                    <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
+                        <Link to={'/SectionOne'}>Home</Link>
+                        <Link to={'/SectionOne'}>Projects</Link>
+                        <Link to={'/SectionOne'}>Contact</Link>
+                        <Link to={'/SectionOne'}>About</Link>
+                    </div>
+                )}
             </div>
         </nav>
     )
