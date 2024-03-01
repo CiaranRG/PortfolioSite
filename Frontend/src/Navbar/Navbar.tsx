@@ -38,7 +38,7 @@ export default function Navbar() {
         <nav className={`menuContent ${addClass ? 'addBackground' : ''}`}>
             <div className='navDiv'>
                 <div className='leftNav'>
-                    <a>Portfolio</a>
+                    <a>Ciaran's Portfolio</a>
                 </div>
                 <div className='rightNav'>
                     <div className='navBurgerIcon' onClick={openNav}>

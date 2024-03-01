@@ -1,10 +1,13 @@
 @import '../App.scss';
 
+// Programming Note So I don't forget, have the nav force open the burger menu and not allow it to close once the user scrolls a certain distance, also fix the transition issues
+
 nav {
     position: fixed;
     width: 100vw;
     // Add this in here to ease the transition back from the scrolled version of the navbar
     transition: background-color 0.5s ease;
+
     .navDiv {
         display: flex;
         align-items: center;
@@ -25,6 +28,7 @@ nav {
             justify-content: center;
             width: 80%;
             padding-left: 20%;
+            transition: 0.5s;
         }
 
         .rightNav {
@@ -65,6 +69,7 @@ nav {
             border-radius: 10px;
             font-size: 0.8rem;
             transition: 0.5s;
+
             &.active {
                 // Use this to bring the menu back to the screen
                 right: 20%;
@@ -83,10 +88,18 @@ nav {
     }
 
     &.addBackground {
-        background-color: $color2;
-        .navDiv{
-            .menuContent{
-                background-color: $color2;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        .navDiv {
+            .menuContent {
+                background-color: rgba(0, 0, 0, 0);
+            }
+
+            .leftNav {
+                a {
+                    display: none;
+
+                }
             }
         }
     }
