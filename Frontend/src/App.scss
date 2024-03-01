@@ -59,3 +59,14 @@ $font-color: $color3;
   height: calc(100vh - $nav-height);
   width: 100vw;
 }
+
+// Using these as breakpoints
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}

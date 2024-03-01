@@ -1,73 +1,93 @@
 @import '../App.scss';
 
 nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    height: $nav-height;
-    width: 100%;
-    max-width: 100%;
-    font-size: 1.25rem;
-    font-weight: 700;
-    border-bottom: 2px solid white;
-    background-color: $color2;
-
-    .leftNav {
-        display: flex;
-        justify-content: flex-start;
-        width: 50%;
-        padding: 0px 0px 0px 10px;
-    }
-
-    .rightNav {
-        display: flex;
-        justify-content: flex-end;
-        width: 50%;
-        padding: 0px 10px 0px 0px;
-
-        .navBurgerIcon {
-            margin-top: 1px;
-            padding-left: 8px;
-        }
-
-        .navBurgerIcon:hover {
-            cursor: pointer;
-        }
-    }
-
-    .menuContent {
+    position: fixed;
+    width: 100vw;
+    // Add this in here to ease the transition back from the scrolled version of the navbar
+    transition: background-color 0.5s ease;
+    .navDiv {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        position: fixed;
-        // Use this to hide the menu
-        right: -100%;
-        max-width: 100vw;
-        background: $color2;
-        justify-content: space-around;
-        height: 15%;
-        transition: right 0.3s ease;
-        z-index: 1000;
-        border: 2px solid $color3;
-        // border-radius: 10px;
-        padding: 20px;
-        font-size: 1rem;
-        margin-top: 30px;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: $nav-height;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 0% 8% 0% 8%;
+        // border-bottom: 2px solid white;
+        background-color: transparent;
+        position: sticky;
 
-        &.active {
-            // Use this to bring the menu back to the screen
-            right: 0%;
+        .leftNav {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            padding-left: 20%;
         }
 
-        a {
-            text-decoration: none;
-            color: $color3;
-            font-weight: 400;
+        .rightNav {
+            display: flex;
+            justify-content: flex-end;
+            width: 20%;
+
+            .navBurgerIcon {
+                margin-top: 1px;
+                padding-left: 8px;
+            }
+
+            .navBurgerIcon:hover {
+                cursor: pointer;
+            }
         }
 
-        a:hover {
-            cursor: pointer;
+        &.addBackground {
+            background-color: $color2 !important;
+        }
+
+        .menuContent {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            position: fixed;
+            // Use this to hide the menu
+            right: -100%;
+            max-width: 100vw;
+            width: 60%;
+            background: $color1;
+            justify-content: space-evenly;
+            height: 5%;
+            transition: right 0.5s ease;
+            z-index: 1000;
+            // border: 2px solid $color3;
+            top: 1%;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            transition: 0.5s;
+            &.active {
+                // Use this to bring the menu back to the screen
+                right: 20%;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color3;
+                font-weight: 700;
+            }
+
+            a:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.addBackground {
+        background-color: $color2;
+        .navDiv{
+            .menuContent{
+                background-color: $color2;
+            }
         }
     }
 }
