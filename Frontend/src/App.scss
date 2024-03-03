@@ -9,6 +9,7 @@
   min-width: 0;
   padding: 0;
   margin: 0;
+  // overflow-x: hidden;
 }
 
 body {
@@ -35,11 +36,11 @@ p {
 $main-font: 'Inter', sans-serif;
 
 // Setting a nav height
-$nav-height: 5vh;
+$nav-height: 7vh;
 
 // Setting colors
 $color1: rgb(35, 35, 35);
-$color2: rgb(60, 110, 113);
+$color2: rgb(8, 30, 51);
 $color3: rgb(255, 255, 255);
 $color4: rgb(217, 217, 217);
 $color5: rgb(40, 75, 99);
@@ -58,3 +59,14 @@ $font-color: $color3;
   height: calc(100vh - $nav-height);
   width: 100vw;
 }
+
+// Using these as breakpoints
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}

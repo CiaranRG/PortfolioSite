@@ -1,11 +1,22 @@
 import './MainPage.scss'
 
-export default function MainPage(){
-    return(
+export default function MainPage() {
+    return (
         <>
-        <div className="mainPageContent">
-            <h1>Homepage</h1>
-        </div>
+            <main className="mainPageContent">
+                <section className='sectionHome'>
+                    <h1>Home</h1>
+                </section>
+                <section className='sectionAbout'>
+                    <h1>About</h1>
+                </section>
+                <section className='sectionProjects'>
+                    <h1>Projects</h1>
+                </section>
+                <section className='sectionContact'>
+                    <h1>Contact</h1>
+                </section>
+            </main>
         </>
     )
 }

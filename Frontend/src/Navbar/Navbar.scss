@@ -1,24 +1,92 @@
 @import '../App.scss';
 
+// Programming Note So I don't forget, have the nav force open the burger menu and not allow it to close once the user scrolls a certain distance, also fix the transition issues
+
 nav {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-    height: $nav-height;
+    position: fixed;
     width: 100vw;
-    padding: 0px;
-    background-color: $color5;
-    .leftNav{
+    // Add this in here to ease the transition back from the scrolled version of the navbar
+    transition: background-color 0.5s ease;
+
+    .navDiv {
         display: flex;
-        justify-content: flex-start;
-        width: 50%;
-        padding: 0px 0px 0px 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: $nav-height;
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: 0% 8% 0% 8%;
+        // border-bottom: 2px solid white;
+        background-color: transparent;
+        position: sticky;
+
+        .leftNav {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            padding-left: 20%;
+            transition: 0.5s;
+            .hidden{
+                display: none;
+            }
+        }
+
+        .rightNav {
+            display: flex;
+            justify-content: flex-end;
+            width: 20%;
+
+            .navBurgerIcon {
+                margin-top: 1px;
+                padding-left: 8px;
+            }
+
+            .navBurgerIcon:hover {
+                cursor: pointer;
+            }
+        }
+
+        .menuContent {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            position: fixed;
+            // Use this to hide the menu
+            right: -100%;
+            max-width: 100vw;
+            width: 60%;
+            background: transparent;
+            justify-content: space-evenly;
+            height: 5%;
+            transition: right 0.5s ease;
+            z-index: 1000;
+            // border: 2px solid $color3;
+            top: 1%;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            transition: 0.5s;
+
+            &.active {
+                // Use this to bring the menu back to the screen
+                right: 20%;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color3;
+                font-weight: 700;
+            }
+
+            a:hover {
+                cursor: pointer;
+            }
+        }
     }
-    .rightNav{
-        display: flex;
-        justify-content: flex-end;
-        width: 50%;
-        padding: 0px 10px 0px 0px;
+
+    &.addBackground {
+        background-color: rgba(0, 0, 0, 0.5);
     }
 }

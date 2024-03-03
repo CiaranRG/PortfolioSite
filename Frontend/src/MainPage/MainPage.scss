@@ -1,6 +1,45 @@
 @import '../App.scss';
 
-.mainPageContent{
-    @include flex-center;
-    @include main-content;
+.mainPageContent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    .sectionHome {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100%;
+        @include flex-center;
+    }
+
+    .sectionAbout {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100%;
+        @include flex-center;
+        background-color: $color2;
+    }
+
+    .sectionProjects {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100%;
+        @include flex-center;
+    }
+
+    .sectionContact {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100%;
+        @include flex-center;
+        background-color: $color2;
+    }
 }
