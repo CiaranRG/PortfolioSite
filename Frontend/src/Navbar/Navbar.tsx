@@ -19,10 +19,10 @@ export default function Navbar() {
         // Top 5% of the viewport height
         const scrollThreshold = window.innerHeight * 0.005;
         const shouldBeColored = window.scrollY > scrollThreshold;
-    
+
         setAddClass(shouldBeColored);
     };
-    
+
 
     useEffect(() => {
         // Setup an event listener, the event being scroll and then the function to execute

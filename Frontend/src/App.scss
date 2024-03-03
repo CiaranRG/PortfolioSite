@@ -60,6 +60,12 @@ $font-color: $color3;
   width: 100vw;
 }
 
+// Adding this in to take care of the space left by making the nav fixed
+.dummyDiv {
+  height: $nav-height;
+  overflow: hidden;
+}
+
 // Using these as breakpoints
 @media (min-width: 576px) {}
 
