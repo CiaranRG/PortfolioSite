@@ -38,7 +38,7 @@ export default function Navbar() {
         <nav className={`menuContent ${addClass ? 'addBackground' : ''}`}>
             <div className='navDiv'>
                 <div className='leftNav'>
-                    <a>Ciaran's Portfolio</a>
+                    <a className={`${!isNavOpen ? '' : 'hidden'}`}>Ciaran's Portfolio</a>
                 </div>
                 <div className='rightNav'>
                     <div className='navBurgerIcon' onClick={openNav}>
@@ -47,9 +47,9 @@ export default function Navbar() {
                     {isNavOpen && (
                         <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
                             <Link to={'/SectionOne'}>Home</Link>
+                            <Link to={'/SectionOne'}>About</Link>
                             <Link to={'/SectionOne'}>Projects</Link>
                             <Link to={'/SectionOne'}>Contact</Link>
-                            <Link to={'/SectionOne'}>About</Link>
                         </div>
                     )}
                 </div>

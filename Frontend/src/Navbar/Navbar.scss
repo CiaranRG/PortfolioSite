@@ -29,6 +29,9 @@ nav {
             width: 80%;
             padding-left: 20%;
             transition: 0.5s;
+            .hidden{
+                display: none;
+            }
         }
 
         .rightNav {
@@ -46,10 +49,6 @@ nav {
             }
         }
 
-        &.addBackground {
-            background-color: $color2 !important;
-        }
-
         .menuContent {
             display: flex;
             align-items: center;
@@ -59,7 +58,7 @@ nav {
             right: -100%;
             max-width: 100vw;
             width: 60%;
-            background: $color1;
+            background: transparent;
             justify-content: space-evenly;
             height: 5%;
             transition: right 0.5s ease;
@@ -89,18 +88,5 @@ nav {
 
     &.addBackground {
         background-color: rgba(0, 0, 0, 0.5);
-
-        .navDiv {
-            .menuContent {
-                background-color: rgba(0, 0, 0, 0);
-            }
-
-            .leftNav {
-                a {
-                    display: none;
-
-                }
-            }
-        }
     }
 }
