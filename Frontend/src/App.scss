@@ -60,6 +60,17 @@ $font-color: $color3;
   width: 100vw;
 }
 
+@mixin section-setup {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+  @include main-content;
+}
+
 // Adding this in to take care of the space left by making the nav fixed
 .dummyDiv {
   height: $nav-height;

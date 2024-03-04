@@ -5,55 +5,49 @@
     flex-direction: column;
     flex-wrap: wrap;
     overflow: hidden;
+
     .sectionHome {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 5%;
-        @include main-content;
-        .homeHeader{
+        @include section-setup;
+        .homeHeader {
             font-size: 3rem;
             font-weight: 700;
         }
-        .homeSubheader{
-            font-size: 1.5rem;
+
+        .homeSubheader {
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
-        .homeParagraph{
-            font-size: 1.2rem;
+
+        .homeParagraph {
+            font-size: 1rem;
+        }
+        @media (min-width: 1400px) {
+            .homeHeader {
+                font-size: 7rem;
+            }
+    
+            .homeSubheader {
+                font-size: 3rem;
+            }
+    
+            .homeParagraph {
+                font-size: 2rem;
+            }
         }
     }
 
     .sectionAbout {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        @include section-setup;
         background-color: $color2;
     }
 
     .sectionProjects {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        @include section-setup;
     }
 
     .sectionContact {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        @include section-setup;
         background-color: $color2;
     }
 }
