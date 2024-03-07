@@ -22,7 +22,92 @@
         .homeParagraph {
             font-size: 1rem;
         }
-        @media (min-width: 1400px) {
+    }
+
+    .sectionAbout {
+        @include section-setup;
+        background-color: $color2;
+        h1{
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+    .sectionProjects {
+        @include section-setup;
+    }
+
+    .sectionContact {
+        @include section-setup;
+        background-color: $color2;
+    }
+    @media (min-width: 576px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 4rem;
+            }
+    
+            .homeSubheader {
+                font-size: 1.5rem;
+            }
+    
+            .homeParagraph {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 5rem;
+            }
+    
+            .homeSubheader {
+                font-size: 2rem;
+            }
+    
+            .homeParagraph {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 6rem;
+            }
+    
+            .homeSubheader {
+                font-size: 2.5rem;
+            }
+    
+            .homeParagraph {
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 7rem;
+            }
+    
+            .homeSubheader {
+                font-size: 3rem;
+            }
+    
+            .homeParagraph {
+                font-size: 2rem;
+            }
+        }
+    }
+    @media (min-width: 1400px) {
+        .sectionHome{
             .homeHeader {
                 font-size: 7rem;
             }
@@ -37,17 +122,4 @@
         }
     }
 
-    .sectionAbout {
-        @include section-setup;
-        background-color: $color2;
-    }
-
-    .sectionProjects {
-        @include section-setup;
-    }
-
-    .sectionContact {
-        @include section-setup;
-        background-color: $color2;
-    }
 }

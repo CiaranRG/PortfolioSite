@@ -50,7 +50,7 @@ export default function Navbar() {
                             <Link to={'/'}>Home</Link>
                             <Link to={'/SectionOne'}>About</Link>
                             <Link to={'/SectionOne'}>Projects</Link>
-                            <Link to={'/SectionOne'}>Contact</Link>
+                            {/* <Link to={'/SectionOne'}>Contact</Link> */}
                         </div>
                     )}
                 </div>

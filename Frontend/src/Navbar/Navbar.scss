@@ -29,10 +29,12 @@ nav {
             width: 80%;
             padding-left: 20%;
             transition: 0.5s;
-            .hidden{
+
+            .hidden {
                 display: none;
             }
-            a{
+
+            a {
                 text-decoration: none;
                 color: $color3;
                 font-size: 1.3rem;
@@ -93,15 +95,17 @@ nav {
     }
 
     &.addBackground {
-        background-color: rgba(0, 0, 0, 1);
+        background-color: rgba(0, 0, 0, 0.8);
     }
+
     @media (min-width: 576px) {
-        .navDiv{
-            .leftNav{
-                a{
+        .navDiv {
+            .leftNav {
+                a {
                     font-size: 1.5rem;
                 }
             }
+
             .menuContent {
                 a {
                     font-size: 1rem;
@@ -109,13 +113,15 @@ nav {
             }
         }
     }
+
     @media (min-width: 768px) {
-        .navDiv{
-            .leftNav{
-                a{
+        .navDiv {
+            .leftNav {
+                a {
                     font-size: 1.7rem;
                 }
             }
+
             .menuContent {
                 a {
                     font-size: 1.2rem;
@@ -123,13 +129,15 @@ nav {
             }
         }
     }
+
     @media (min-width: 1400px) {
-        .navDiv{
-            .leftNav{
-                a{
+        .navDiv {
+            .leftNav {
+                a {
                     font-size: 1.8rem;
                 }
             }
+
             .menuContent {
                 a {
                     font-size: 1.2rem;
