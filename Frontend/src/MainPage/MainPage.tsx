@@ -11,24 +11,25 @@ export default function MainPage() {
                 </section>
                 <section className='sectionAbout'>
                     <h1>About Me</h1>
+                    <br />
                     <p>
-                        Hello! I'm a web developer with a passion for technology, driven by an early fascination with computers and video games. My journey into programming began with the desire to create games, leading me down the path to discovering the world of web development.
+                        Hello! I'm a web developer with a foundational passion rooted in technology, sparked by an early interest in computers and video games. The initial desire to create games opened the door to the broader world of programming, leading me to the fascinating field of web development.
                     </p>
                     <br />
                     <p>
-                        My adventure started with Harvard's CS50 course, where I gained a foundational understanding of computer science principles. Eager to dive deeper into web development, I then completed a comprehensive Udemy course, equipping me with the skills needed to tackle full-stack projects. My approach to learning has always been hands-on, crafting projects that emulate real-world websites. This practical experience has given me a solid grasp of managing user accounts and rendering data from PostgreSQL databases, preparing me for the kind of work I aspire to do.
+                        I embarked on this journey with Harvard's CS50 course, which laid the groundwork in computer science principles. Eager to dive deeper, I completed a comprehensive Udemy course in web development, honing my skills for full-stack projects. I have a hands-on approach to learning, crafting projects that emulate real-world websites to understand the work I aim to pursue. Through these projects, I've become proficient in technologies like HTML, CSS, JavaScript, React for the front end, and Node.js, Express, and PostgreSQL for the back end, equipping me to manage user accounts and render backend data effectively.
                     </p>
                     <br />
                     <p>
-                        While I have a particular affinity for front-end development—where I can exercise my creativity in designing user-centric experiences—I've also found the complexities of back-end development intriguing. Striking the perfect balance between functionality and aesthetics is what I strive for in every project.
+                        While my heart lies in front-end development—where I can unleash my creativity to craft intuitive user experiences—I also find the backend's complexities intriguing. Achieving the perfect blend of functionality and aesthetics is my ultimate goal for each project.
                     </p>
                     <br />
                     <p>
-                        Looking ahead, my goal is to create industry-leading web applications that incorporate the latest technologies and design trends. I'm also keen on broadening my expertise in web security, ensuring that the applications I build are not only innovative but also safe for users. As the tech landscape evolves, I stay informed through communities on Reddit, YouTube, and Twitter, always ready to adapt and embrace new challenges.
+                        Moving forward, I aspire to develop top-level industry web applications, complete with all the "bells and whistles." I'm also keen on expanding my knowledge in web security and becoming versatile in various technologies to adapt to any situation. To stay at the cutting edge, I engage with tech communities on Reddit, YouTube, and Twitter.
                     </p>
                     <br />
                     <p>
-                        My journey in web development has been incredibly rewarding. Every project, every line of code, has been a stepping stone towards becoming the developer I aim to be. I'm proud of how far I've come and excited for what the future holds.
+                        My journey in web development has been a profound learning experience, and I take pride in every step. I'm excited about the future and the opportunities it holds.
                     </p>
                 </section>
                 <section className='sectionProjects'>

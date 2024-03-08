@@ -27,11 +27,9 @@
     .sectionAbout {
         @include section-setup;
         background-color: $color2;
-        h1{
-            margin-bottom: 10px;
-        }
         p{
             font-size: 0.8rem;
+            font-weight: 700;
         }
     }
 
@@ -57,6 +55,14 @@
                 font-size: 1.2rem;
             }
         }
+        .sectionAbout {
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
     }
 
     @media (min-width: 768px) {
@@ -73,6 +79,14 @@
                 font-size: 1.5rem;
             }
         }
+        .sectionAbout {
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
     }
 
     @media (min-width: 992px) {
@@ -87,6 +101,14 @@
     
             .homeParagraph {
                 font-size: 1.7rem;
+            }
+        }
+        .sectionAbout {
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.2rem;
             }
         }
     }
@@ -118,6 +140,14 @@
     
             .homeParagraph {
                 font-size: 2rem;
+            }
+        }
+        .sectionAbout {
+            h1{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 1.5rem;
             }
         }
     }
