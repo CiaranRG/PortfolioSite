@@ -1,4 +1,5 @@
 import './MainPage.scss'
+import ProjectPreview from '../Components/ProjectPreview/ProjectPreview'
 
 export default function MainPage() {
     return (
@@ -33,11 +34,12 @@ export default function MainPage() {
                     </p>
                 </section>
                 <section className='sectionProjects'>
-                    <h1>Projects</h1>
-                    <br />
-                    <div>SWAPI Project - MUI/React </div>
+                    <ProjectPreview />
+                    <ProjectPreview />
+                    <ProjectPreview />
+                    {/* <div>SWAPI Project - MUI/React </div>
                     <div>Restaurant - Node/React/TS/SCSS/PSQL </div>
-                    <div>Ecommerce - Node/React/TS/SCSS/PSQL </div>
+                    <div>Ecommerce - Node/React/TS/SCSS/PSQL </div> */}
                 </section>
                 {/* <section className='sectionContact'>
                     <h1>Contact</h1>

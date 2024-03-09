@@ -35,6 +35,9 @@
 
     .sectionProjects {
         @include section-setup;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2%;
     }
 
     .sectionContact {
