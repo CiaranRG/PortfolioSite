@@ -1,6 +1,13 @@
 import './ProjectPreview.scss'
 
-export default function ProjectPreview() {
+type ProjectPreviewProps = {
+    imgUrl: string,
+    title: string,
+    description: string,
+}
+
+export default function ProjectPreview({imgUrl, title, description}: ProjectPreviewProps) {
+    console.log(imgUrl)
     return (
         <>
             <div className='previewDiv'>
@@ -8,10 +15,10 @@ export default function ProjectPreview() {
                     <p>Picture</p>
                 </div>
                 <div className="bottomDiv">
-                    <p>Title</p>
-                    <p>Description</p>
+                    <p>{title}</p>
+                    <p>{description}</p>
                     <p>Icons</p>
-                    <p>Button</p>
+                    {/* <button>View More</button> */}
                 </div>
             </div>
         </>

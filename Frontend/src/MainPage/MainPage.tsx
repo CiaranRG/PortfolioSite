@@ -1,7 +1,15 @@
 import './MainPage.scss'
 import ProjectPreview from '../Components/ProjectPreview/ProjectPreview'
+import Modal from '../Modals/Modal'
+import { useState } from 'react'
 
 export default function MainPage() {
+    const [isModalOpen, setIsModalOpen] = useState(false)
+
+    const toggleModal = () => {
+
+    }
+
     return (
         <>
             <main className="mainPageContent">
@@ -34,9 +42,9 @@ export default function MainPage() {
                     </p>
                 </section>
                 <section className='sectionProjects'>
-                    <ProjectPreview />
-                    <ProjectPreview />
-                    <ProjectPreview />
+                    <ProjectPreview imgUrl={'temp'} title={'SWAPI APP'} description={'An app used to search for info about any star wars character'} />
+                    <ProjectPreview imgUrl={'temp'} title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'} />
+                    <ProjectPreview imgUrl={'temp'} title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'} />
                     {/* <div>SWAPI Project - MUI/React </div>
                     <div>Restaurant - Node/React/TS/SCSS/PSQL </div>
                     <div>Ecommerce - Node/React/TS/SCSS/PSQL </div> */}
@@ -45,6 +53,7 @@ export default function MainPage() {
                     <h1>Contact</h1>
                 </section> */}
             </main>
+            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><div><h1>TEST</h1></div></Modal>
         </>
     )
 }
