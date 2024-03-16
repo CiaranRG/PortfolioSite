@@ -1,13 +1,14 @@
 import './MainPage.scss'
 import ProjectPreview from '../Components/ProjectPreview/ProjectPreview'
-import Modal from '../Modals/Modal'
+import Modal from '../Components/Modal/Modal'
+import ProjectDisplay from '../Components/ProjectDisplay/ProjectDisplay'
 import { useState } from 'react'
 
 export default function MainPage() {
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(true)
 
     const toggleModal = () => {
-
+        setIsModalOpen(!isModalOpen)
     }
 
     return (
@@ -53,7 +54,7 @@ export default function MainPage() {
                     <h1>Contact</h1>
                 </section> */}
             </main>
-            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><div><h1>TEST</h1></div></Modal>
+            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><ProjectDisplay/></Modal>
         </>
     )
 }

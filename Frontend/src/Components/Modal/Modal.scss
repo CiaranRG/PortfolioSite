@@ -1,4 +1,4 @@
-@import '../App.scss';
+@import '../../App.scss';
 
 .modalOverlay{
     display: none;
@@ -16,4 +16,6 @@
 
 .modalOverlay.show{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
