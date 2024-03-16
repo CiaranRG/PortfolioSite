@@ -5,10 +5,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: $color2;
-    padding: 2%;
-    border-top: 2px solid white;
-    height: 15vh;
+    // background-color: $color1;
+    background-color: black;
+    padding: 3%;
+    border-top: 2px solid black;
+    height: 10vh;
     .backToTopDiv{
         font-size: 0.8rem;
         a{

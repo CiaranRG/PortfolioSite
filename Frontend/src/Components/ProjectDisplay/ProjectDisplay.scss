@@ -1,0 +1,17 @@
+@import '../../App.scss';
+
+.projectDisplayDiv{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80vw;
+    border: 2px solid $color3;
+    border-radius: 10px;
+    background-color: $color1;
+    padding: 30px 30px 30px 30px;
+    align-items: center;
+    justify-content: space-evenly;
+    h1{
+        font-size: 2rem;
+    }
+}

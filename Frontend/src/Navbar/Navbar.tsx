@@ -18,11 +18,12 @@ export default function Navbar() {
     const handleScroll = () => {
         // Top 5% of the viewport height
         const scrollThreshold = window.innerHeight * 0.005;
+        // The value stored in the variable will either be true or false
         const shouldBeColored = window.scrollY > scrollThreshold;
-    
+        // We can then use that variable to decide if addClass should be true or false
         setAddClass(shouldBeColored);
     };
-    
+
 
     useEffect(() => {
         // Setup an event listener, the event being scroll and then the function to execute
@@ -38,7 +39,7 @@ export default function Navbar() {
         <nav className={`menuContent ${addClass ? 'addBackground' : ''}`}>
             <div className='navDiv'>
                 <div className='leftNav'>
-                    <a className={`${!isNavOpen ? '' : 'hidden'}`}>Ciaran's Portfolio</a>
+                    <Link to={'/'} className={`${isNavOpen ? 'hidden' : ''}`}>Ciaran's Portfolio</Link>
                 </div>
                 <div className='rightNav'>
                     <div className='navBurgerIcon' onClick={openNav}>
@@ -46,10 +47,10 @@ export default function Navbar() {
                     </div>
                     {isNavOpen && (
                         <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
-                            <Link to={'/SectionOne'}>Home</Link>
+                            <Link to={'/'}>Home</Link>
                             <Link to={'/SectionOne'}>About</Link>
                             <Link to={'/SectionOne'}>Projects</Link>
-                            <Link to={'/SectionOne'}>Contact</Link>
+                            {/* <Link to={'/SectionOne'}>Contact</Link> */}
                         </div>
                     )}
                 </div>

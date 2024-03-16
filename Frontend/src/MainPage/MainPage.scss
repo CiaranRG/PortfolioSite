@@ -5,41 +5,154 @@
     flex-direction: column;
     flex-wrap: wrap;
     overflow: hidden;
+
     .sectionHome {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        @include section-setup;
+        .homeHeader {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .homeSubheader {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .homeParagraph {
+            font-size: 1rem;
+        }
     }
 
     .sectionAbout {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        @include section-setup;
         background-color: $color2;
+        p{
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
     }
 
     .sectionProjects {
-        display: flex;
-        flex-direction: column;
+        @include section-setup;
         flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        flex-direction: row;
+        gap: 2%;
     }
 
     .sectionContact {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100%;
-        @include flex-center;
+        @include section-setup;
         background-color: $color2;
     }
+    @media (min-width: 576px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 4rem;
+            }
+    
+            .homeSubheader {
+                font-size: 1.5rem;
+            }
+    
+            .homeParagraph {
+                font-size: 1.2rem;
+            }
+        }
+        .sectionAbout {
+            h1{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 5rem;
+            }
+    
+            .homeSubheader {
+                font-size: 2rem;
+            }
+    
+            .homeParagraph {
+                font-size: 1.5rem;
+            }
+        }
+        .sectionAbout {
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 6rem;
+            }
+    
+            .homeSubheader {
+                font-size: 2.5rem;
+            }
+    
+            .homeParagraph {
+                font-size: 1.7rem;
+            }
+        }
+        .sectionAbout {
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 7rem;
+            }
+    
+            .homeSubheader {
+                font-size: 3rem;
+            }
+    
+            .homeParagraph {
+                font-size: 2rem;
+            }
+        }
+    }
+    @media (min-width: 1400px) {
+        .sectionHome{
+            .homeHeader {
+                font-size: 7rem;
+            }
+    
+            .homeSubheader {
+                font-size: 3rem;
+            }
+    
+            .homeParagraph {
+                font-size: 2rem;
+            }
+        }
+        .sectionAbout {
+            h1{
+                font-size: 4rem;
+            }
+            p{
+                font-size: 1.5rem;
+            }
+        }
+    }
+
 }
