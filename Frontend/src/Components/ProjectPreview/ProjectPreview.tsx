@@ -4,13 +4,14 @@ type ProjectPreviewProps = {
     imgUrl: string,
     title: string,
     description: string,
+    onClick: () => void,
 }
 
-export default function ProjectPreview({imgUrl, title, description}: ProjectPreviewProps) {
+export default function ProjectPreview({imgUrl, title, description, onClick}: ProjectPreviewProps) {
     console.log(imgUrl)
     return (
         <>
-            <div className='previewDiv'>
+            <div className='previewDiv' onClick={onClick}>
                 <div className="topDiv">
                     <p>Picture</p>
                 </div>

@@ -43,9 +43,9 @@ export default function MainPage() {
                     </p>
                 </section>
                 <section className='sectionProjects'>
-                    <ProjectPreview imgUrl={'temp'} title={'SWAPI APP'} description={'An app used to search for info about any star wars character'} />
-                    <ProjectPreview imgUrl={'temp'} title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'} />
-                    <ProjectPreview imgUrl={'temp'} title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'} />
+                    <ProjectPreview imgUrl={'temp'} title={'SWAPI APP'} description={'An app used to search for info about any star wars character'} onClick={toggleModal} />
+                    <ProjectPreview imgUrl={'temp'} title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'} onClick={toggleModal} />
+                    <ProjectPreview imgUrl={'temp'} title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'} onClick={toggleModal} />
                     {/* <div>SWAPI Project - MUI/React </div>
                     <div>Restaurant - Node/React/TS/SCSS/PSQL </div>
                     <div>Ecommerce - Node/React/TS/SCSS/PSQL </div> */}
@@ -54,7 +54,7 @@ export default function MainPage() {
                     <h1>Contact</h1>
                 </section> */}
             </main>
-            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><ProjectDisplay/></Modal>
+            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><ProjectDisplay /></Modal>
         </>
     )
 }
