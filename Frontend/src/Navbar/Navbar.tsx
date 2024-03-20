@@ -47,10 +47,10 @@ export default function Navbar() {
                     </div>
                     {isNavOpen && (
                         <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
-                            <Link to={'/'}>Home</Link>
                             <Link to={'/SectionOne'}>About</Link>
                             <Link to={'/SectionOne'}>Projects</Link>
-                            {/* <Link to={'/SectionOne'}>Contact</Link> */}
+                            <Link to={'https://github.com/CiaranRG'}>Github</Link>
+                            <Link to={'/'}>Contact</Link>
                         </div>
                     )}
                 </div>

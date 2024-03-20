@@ -5,10 +5,24 @@ import ProjectDisplay from '../Components/ProjectDisplay/ProjectDisplay'
 import { useState } from 'react'
 
 export default function MainPage() {
-    const [isModalOpen, setIsModalOpen] = useState(true)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [currentProject, setCurrentProject] = useState({title: '', description: '', imgUrl: '', codeLink: ''})
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen)
+    }
+
+    type ProjectData = {
+        title: string;
+        description: string;
+        imgUrl: string;
+        codeLink: string;
+    };
+
+    const handleProjectSelect = (projectData: ProjectData) => {
+        setCurrentProject(projectData)
+        console.log(projectData)
+        toggleModal()
     }
 
     return (
@@ -43,18 +57,36 @@ export default function MainPage() {
                     </p>
                 </section>
                 <section className='sectionProjects'>
-                    <ProjectPreview imgUrl={'temp'} title={'SWAPI APP'} description={'An app used to search for info about any star wars character'} onClick={toggleModal} />
-                    <ProjectPreview imgUrl={'temp'} title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'} onClick={toggleModal} />
-                    <ProjectPreview imgUrl={'temp'} title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'} onClick={toggleModal} />
-                    {/* <div>SWAPI Project - MUI/React </div>
-                    <div>Restaurant - Node/React/TS/SCSS/PSQL </div>
-                    <div>Ecommerce - Node/React/TS/SCSS/PSQL </div> */}
+                    <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                        title={'Star Wars Api App'} description={'An app used to search for info about any star wars character'} codeLink={'https://github.com/CiaranRG/StaticSWAPISite'} isModalOpen={isModalOpen}
+                        onClick={() => handleProjectSelect({
+                            title: 'Star Wars Api App',
+                            description: 'An app used to search for info about any star wars character',
+                            imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            codeLink: 'https://github.com/CiaranRG/StaticSWAPISite',
+                        })}
+                    />
+                    <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                        title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'} codeLink={'https://github.com/CiaranRG/RestaurantApp'} isModalOpen={isModalOpen}
+                        onClick={() => handleProjectSelect({
+                            title: 'Restaurant App',
+                            description: 'Mock restaurant website with account/reservation CRUD',
+                            imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            codeLink: 'https://github.com/CiaranRG/RestaurantApp',
+                        })}
+                    />
+                    <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                        title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'} codeLink={'https://github.com/CiaranRG/EcommerceApp'} isModalOpen={isModalOpen}
+                        onClick={() => handleProjectSelect({
+                            title: 'Ecommerce App',
+                            description: 'Meant to simulate a real world clothing shop website',
+                            imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            codeLink: 'https://github.com/CiaranRG/EcommerceApp',
+                        })}
+                    />
                 </section>
-                {/* <section className='sectionContact'>
-                    <h1>Contact</h1>
-                </section> */}
             </main>
-            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><ProjectDisplay /></Modal>
+            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><ProjectDisplay projectInfo={currentProject} /></Modal>
         </>
     )
 }

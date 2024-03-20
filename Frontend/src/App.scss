@@ -16,7 +16,7 @@ body {
   // Ensures the body fills the entire viewport
   min-height: 100dvh;
   // background: rgb(29, 29, 29);
-  background: rgb(35, 35, 35);
+  background: #0f0f0f;
   font-family: 'Inter', sans-serif;
   color: rgb(255, 255, 255);
 }
@@ -40,10 +40,8 @@ $nav-height: 7vh;
 
 // Setting colors
 $color1: rgb(35, 35, 35);
-$color2: rgb(8, 30, 51);
+$color2: #0f0f0f;
 $color3: rgb(255, 255, 255);
-$color4: rgb(217, 217, 217);
-$color5: rgb(40, 75, 99);
 
 $font-color: $color3;
 

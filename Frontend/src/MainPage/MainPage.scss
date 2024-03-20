@@ -26,7 +26,6 @@
 
     .sectionAbout {
         @include section-setup;
-        background-color: $color2;
         p{
             font-size: 0.8rem;
             font-weight: 700;
@@ -42,7 +41,6 @@
 
     .sectionContact {
         @include section-setup;
-        background-color: $color2;
     }
     @media (min-width: 576px) {
         .sectionHome{
