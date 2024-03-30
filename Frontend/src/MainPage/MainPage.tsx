@@ -58,7 +58,7 @@ export default function MainPage() {
                 </section>
                 <section className='sectionProjects'>
                     <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-                        title={'Star Wars Api App'} description={'An app used to search for info about any star wars character'} codeLink={'https://github.com/CiaranRG/StaticSWAPISite'} isModalOpen={isModalOpen}
+                        title={'Star Wars Api App'} description={'An app used to search for info about any star wars character'} 
                         onClick={() => handleProjectSelect({
                             title: 'Star Wars Api App',
                             description: 'An app used to search for info about any star wars character',
@@ -67,7 +67,7 @@ export default function MainPage() {
                         })}
                     />
                     <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-                        title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'} codeLink={'https://github.com/CiaranRG/RestaurantApp'} isModalOpen={isModalOpen}
+                        title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'}
                         onClick={() => handleProjectSelect({
                             title: 'Restaurant App',
                             description: 'Mock restaurant website with account/reservation CRUD',
@@ -75,8 +75,8 @@ export default function MainPage() {
                             codeLink: 'https://github.com/CiaranRG/RestaurantApp',
                         })}
                     />
-                    <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-                        title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'} codeLink={'https://github.com/CiaranRG/EcommerceApp'} isModalOpen={isModalOpen}
+                    <ProjectPreview imgUrl={'../../public/WebsitePictures/ecommerceApp.jpg'}
+                        title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'}
                         onClick={() => handleProjectSelect({
                             title: 'Ecommerce App',
                             description: 'Meant to simulate a real world clothing shop website',

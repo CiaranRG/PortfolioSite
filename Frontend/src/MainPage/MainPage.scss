@@ -33,14 +33,18 @@
     }
 
     .sectionProjects {
-        @include section-setup;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5%;
+        min-height: calc(100vh - $nav-height);
+        width: 100vw;
         flex-wrap: wrap;
         flex-direction: row;
         gap: 2%;
-    }
-
-    .sectionContact {
-        @include section-setup;
     }
     @media (min-width: 576px) {
         .sectionHome{

@@ -11,8 +11,12 @@
     // border: 3px solid $color3;
     overflow: hidden;
     .previewPicture{
-        height: 70%;
+        height: 20vh;
         border-radius: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
     }
     .previewTexts{
         display: flex;
@@ -21,6 +25,7 @@
         align-items: flex-start;
         text-align: start;
         padding: 10px 3px 10px 3px;
+        margin-bottom: 20px;
         .previewTitle{
             font-size: 1rem;
         }
