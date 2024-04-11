@@ -22,6 +22,16 @@
         .homeParagraph {
             font-size: 1rem;
         }
+        .homeLogos{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 10px 0px 0px 0px;
+            .homeGithub{
+                color: white;
+                font-size: 2rem;
+            }
+        }
     }
 
     .sectionAbout {
