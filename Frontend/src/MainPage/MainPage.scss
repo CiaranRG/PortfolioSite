@@ -52,8 +52,6 @@
         padding: 5%;
         min-height: calc(100vh - $nav-height);
         width: 100vw;
-        flex-wrap: wrap;
-        flex-direction: row;
         gap: 2%;
     }
     @media (min-width: 576px) {
@@ -77,6 +75,9 @@
             p{
                 font-size: 1rem;
             }
+        }
+        .sectionProjects{
+
         }
     }
 
@@ -124,6 +125,15 @@
             }
             p{
                 font-size: 1.2rem;
+            }
+        }
+        .sectionProjects{
+            display: flex;
+            flex-direction: row;
+            gap: 5%;
+            .previewDiv{
+                width: 350%;
+                height: 50%;
             }
         }
     }

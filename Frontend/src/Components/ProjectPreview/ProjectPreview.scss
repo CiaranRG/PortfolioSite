@@ -7,30 +7,38 @@
     align-items: center;
     height: 30%;
     width: 90%;
+    margin-bottom: 20px;
     background-color: $color2;
     // border: 3px solid $color3;
     overflow: hidden;
     .previewPicture{
+        position: relative;
         height: 20vh;
         border-radius: 10px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
-    }
-    .previewTexts{
-        display: flex;
-        height: 30%;
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: start;
-        padding: 10px 3px 10px 3px;
-        margin-bottom: 20px;
-        .previewTitle{
-            font-size: 1rem;
-        }
-        p{
-            font-size: 0.8rem;
+        .previewFade{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0; // Ensure the overlay spans the whole area
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8); // Semi-transparent overlay
+            border-radius: 0px; // Match the border-radius of the parent if needed
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            .previewTitle{
+                font-size: 1rem;
+                text-shadow: 2px 2px 2px black;
+            }
+            p{
+                font-size: 0.8rem;
+            }
         }
     }
     div {

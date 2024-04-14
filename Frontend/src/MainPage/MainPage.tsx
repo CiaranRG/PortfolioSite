@@ -6,14 +6,14 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faNodeJs, faReact, faGithub, faNode } from '@fortawesome/free-brands-svg-icons';
+import { faNodeJs, faReact, faGithub, faSass } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 // Importing this so we can add it into our type definitions for the icons
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export default function MainPage() {
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [currentProject, setCurrentProject] = useState({ title: '', description: '', imgUrl: '', codeLink: '' })
+    const [currentProject, setCurrentProject] = useState({ title: '', description: { intro: '', middle: '', tech: '' }, imgUrl: '', codeLink: '' })
 
     const toggleModal = () => {
         setIsModalOpen(!isModalOpen)
@@ -21,7 +21,11 @@ export default function MainPage() {
 
     type ProjectData = {
         title: string;
-        description: string;
+        description: {
+            intro: string,
+            middle: string,
+            tech: string,
+        }
         imgUrl: string;
         codeLink: string;
         icons?: IconDefinition[];
@@ -69,33 +73,45 @@ export default function MainPage() {
                 </section>
                 <section className='sectionProjects'>
                     <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
-                        title={'Star Wars Api App'} description={'An app used to search for info about any star wars character'}
+                        title={'Star Wars Api App'} description={'An app used to search for info about any star wars character from the swapi api'}
                         onClick={() => handleProjectSelect({
                             title: 'Star Wars Api App',
-                            description: 'An app used to search for info about any star wars character',
+                            description: {
+                                intro: 'Intro',
+                                middle: 'Middle',
+                                tech: 'Tech Used'
+                            },
                             imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                             codeLink: 'https://github.com/CiaranRG/StaticSWAPISite',
-                            icons: [faReact, faNodeJs, faGithub, faDatabase],
+                            icons: [faReact, faGithub],
                         })}
                     />
                     <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
                         title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'}
                         onClick={() => handleProjectSelect({
                             title: 'Restaurant App',
-                            description: 'Mock restaurant website with account/reservation CRUD',
+                            description: {
+                                intro: 'Intro',
+                                middle: 'Middle',
+                                tech: 'Tech Used'
+                            },
                             imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                             codeLink: 'https://github.com/CiaranRG/RestaurantApp',
-                            icons: [faReact, faNodeJs, faGithub, faDatabase],
+                            icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
                     />
                     <ProjectPreview imgUrl={'../../public/WebsitePictures/ecommerceApp.jpg'}
                         title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'}
                         onClick={() => handleProjectSelect({
                             title: 'Ecommerce App',
-                            description: 'Meant to simulate a real world clothing shop website',
+                            description: {
+                                intro: 'This is an ecommerce app meant to simulate a real world clothing site.',
+                                middle: 'I wanted to add in as much as I could to make it feel like something you would see by any big corporation.',
+                                tech: 'This was made in React with Vite and the backend was built with NodeJS, For our database we used PostgreSQL with SCSS being the main package for dealing with our styles, other niche use packages such as BCryp/Axios/FontAwesome etc.'
+                            },
                             imgUrl: '../../public/WebsitePictures/ecommerceApp.jpg',
                             codeLink: 'https://github.com/CiaranRG/EcommerceApp',
-                            icons: [faReact, faNodeJs, faGithub, faDatabase],
+                            icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
                     />
                 </section>

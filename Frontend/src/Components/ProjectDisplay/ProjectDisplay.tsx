@@ -5,15 +5,14 @@ import './ProjectDisplay.scss'
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-type IconType = {
-    name: string; // Name of the technology
-    icon: JSX.Element; // The actual icon component, could be from an icon library
-};
-
 type projectInfoProps = {
     projectInfo: {
         title: string,
-        description: string,
+        description: {
+            intro: string,
+            middle: string,
+            tech: string,
+        },
         codeLink: string,
         imgUrl: string,
         icons?: IconDefinition[],
@@ -29,7 +28,11 @@ export default function ProjectDisplay({ projectInfo }: projectInfoProps) {
     return (
         <div className='projectDisplayDiv' onClick={handleModalClick}>
             <h1>{projectInfo.title}</h1>
-            <p>{projectInfo.description}</p>
+            <div className='projectDescription'>
+                <p>{projectInfo.description.intro}</p>
+                <p>{projectInfo.description.middle}</p>
+                <p>{projectInfo.description.tech}</p>
+            </div>
             {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure illo dolores eum impedit quo eligendi unde officiis facere, ipsum eveniet alias nobis animi quas deleniti incidunt odit id corrupti. Quidem?</p> */}
             <div className='projectIcons'>
                 {projectInfo.icons?.map((icon, index) => (

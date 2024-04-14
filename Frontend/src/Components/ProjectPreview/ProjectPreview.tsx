@@ -12,10 +12,11 @@ export default function ProjectPreview({ imgUrl, title, description, onClick}: P
         <>
             <div className='previewDiv' onClick={onClick}>
                 <div className='previewPicture' style={{ backgroundImage: `url(${imgUrl})`}}>
-                </div>
-                <div className='previewTexts'>
-                    <p className='previewTitle'>{title}</p>
-                    <p>{description}</p>
+                    <div className='previewFade'>
+                        <p className='previewTitle'>{title}</p>
+                        <p>{description}</p>
+                        <p>Click to View More!</p>
+                    </div>
                 </div>
             </div>
         </>
