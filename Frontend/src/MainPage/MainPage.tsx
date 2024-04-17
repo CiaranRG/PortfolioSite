@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faNodeJs, faReact, faGithub, faSass } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 // Importing this so we can add it into our type definitions for the icons
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -45,7 +45,7 @@ export default function MainPage() {
                     <p className='homeSubheader'>Fullstack Web Developer</p>
                     <div className='homeLogos'>
                         <Link className='homeGithub' to={'https://github.com/CiaranRG?ocid=AIDcmm153qff2f_SEM__k_Cj0KCQjwk6SwBhDPARIsAJ59Gwcll4CWUlwSWoFr8lTOJ5-y5sVVzcp4928L7QKFYMgl_H4HE3lb-NYaAsKDEALw_wcB_k_'}><FontAwesomeIcon icon={faGithub} /></Link>
-                        <Link className='homeGithub' to={'https://github.com/CiaranRG?ocid=AIDcmm153qff2f_SEM__k_Cj0KCQjwk6SwBhDPARIsAJ59Gwcll4CWUlwSWoFr8lTOJ5-y5sVVzcp4928L7QKFYMgl_H4HE3lb-NYaAsKDEALw_wcB_k_'}><FontAwesomeIcon icon={faGithub} /></Link>
+                        <button className='homeEmail'><FontAwesomeIcon icon={faEnvelope} /></button>
                     </div>
                 </section>
                 <section className='sectionAbout'>

@@ -24,12 +24,19 @@
         }
         .homeLogos{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             width: 100%;
+            gap: 20%;
             padding: 10px 0px 0px 0px;
             .homeGithub{
                 color: white;
                 font-size: 2rem;
+            }
+            .homeEmail{
+                color: white;
+                font-size: 2rem;
+                background: transparent;
+                border: none;
             }
         }
     }
@@ -75,9 +82,6 @@
             p{
                 font-size: 1rem;
             }
-        }
-        .sectionProjects{
-
         }
     }
 
