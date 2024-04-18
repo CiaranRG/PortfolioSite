@@ -39,7 +39,8 @@ export default function Navbar() {
         <nav className={`menuContent ${addClass ? 'addBackground' : ''}`}>
             <div className='navDiv'>
                 <div className='leftNav'>
-                    <Link to={'/'} className={`${isNavOpen ? 'hidden' : ''}`}>Ciaran's Portfolio</Link>
+                    {/* If the isNavOpen is true the thing on the left is added which here is the class otherwise the thing on the right is which here is just nothing */}
+                    <a href='#home' className={`${isNavOpen ? 'hidden' : ''}`}>Ciaran's Portfolio</a>
                 </div>
                 <div className='rightNav'>
                     <div className='navBurgerIcon' onClick={openNav}>
@@ -47,10 +48,11 @@ export default function Navbar() {
                     </div>
                     {isNavOpen && (
                         <div className={`menuContent ${isNavOpen ? 'active' : ''}`}>
-                            <Link to={'/SectionOne'}>About</Link>
-                            <Link to={'/SectionOne'}>Projects</Link>
-                            <Link to={'https://github.com/CiaranRG'}>Github</Link>
-                            <a href="mailto:ciarangrant2@aol.co.uk">Contact</a>
+                            {/* We add in a # instead of a / so that we can route from section to section instead of page to page */}
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#projects">Projects</a>
+                            <a href="">Contact</a>
                         </div>
                     )}
                 </div>

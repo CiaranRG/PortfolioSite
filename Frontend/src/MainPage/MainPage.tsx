@@ -40,7 +40,8 @@ export default function MainPage() {
     return (
         <>
             <main className="mainPageContent">
-                <section className='sectionHome'>
+                <section id='home' className='sectionHome'>
+                    <div className='dummyDiv'></div>
                     <p className='homeHeader'>Ciaran Grant</p>
                     <p className='homeSubheader'>Fullstack Web Developer</p>
                     <div className='homeLogos'>
@@ -48,7 +49,8 @@ export default function MainPage() {
                         <button className='homeEmail'><FontAwesomeIcon icon={faEnvelope} /></button>
                     </div>
                 </section>
-                <section className='sectionAbout'>
+                <section id='about' className='sectionAbout'>
+                    <div className='dummyDiv'></div>
                     <h1>About Me</h1>
                     <br />
                     <p>
@@ -71,7 +73,8 @@ export default function MainPage() {
                         My journey in web development has been a profound learning experience, and I take pride in every step. I'm excited about the future and the opportunities it holds.
                     </p>
                 </section>
-                <section className='sectionProjects'>
+                <section id='projects' className='sectionProjects'>
+                    <div className='dummyDiv'></div>
                     <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
                         title={'Star Wars Api App'} description={'An app used to search for info about any star wars character from the swapi api'}
                         onClick={() => handleProjectSelect({

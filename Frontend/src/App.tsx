@@ -11,11 +11,10 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <div className='dummyDiv'></div>
         <Routes>
           <Route path='/' element={<MainPage />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </Router>
     </>
   )
