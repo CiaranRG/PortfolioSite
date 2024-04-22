@@ -10,13 +10,18 @@ import { faNodeJs, faReact, faGithub, faSass } from '@fortawesome/free-brands-sv
 import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 // Importing this so we can add it into our type definitions for the icons
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import ContactForm from '../Components/ContactForm/ContactForm'
 
 export default function MainPage() {
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isProjectModalOpen, setIsProjectModalOpen] = useState(false)
+    const [isContactModalOpen, setIsContactModalOpen] = useState(false)
     const [currentProject, setCurrentProject] = useState({ title: '', description: { intro: '', middle: '', tech: '' }, imgUrl: '', codeLink: '' })
 
-    const toggleModal = () => {
-        setIsModalOpen(!isModalOpen)
+    const toggleProjectModal = () => {
+        setIsProjectModalOpen(!isProjectModalOpen)
+    }
+    const toggleContactModal = () => {
+        setIsContactModalOpen(!isContactModalOpen)
     }
 
     type ProjectData = {
@@ -34,7 +39,7 @@ export default function MainPage() {
     const handleProjectSelect = (projectData: ProjectData) => {
         setCurrentProject(projectData)
         console.log(projectData)
-        toggleModal()
+        toggleProjectModal()
     }
 
     return (
@@ -46,7 +51,7 @@ export default function MainPage() {
                     <p className='homeSubheader'>Fullstack Web Developer</p>
                     <div className='homeLogos'>
                         <Link className='homeGithub' to={'https://github.com/CiaranRG?ocid=AIDcmm153qff2f_SEM__k_Cj0KCQjwk6SwBhDPARIsAJ59Gwcll4CWUlwSWoFr8lTOJ5-y5sVVzcp4928L7QKFYMgl_H4HE3lb-NYaAsKDEALw_wcB_k_'}><FontAwesomeIcon icon={faGithub} /></Link>
-                        <button className='homeEmail'><FontAwesomeIcon icon={faEnvelope} /></button>
+                        <button className='homeEmail' onClick={toggleContactModal}><FontAwesomeIcon icon={faEnvelope} /></button>
                     </div>
                 </section>
                 <section id='about' className='sectionAbout'>
@@ -119,7 +124,8 @@ export default function MainPage() {
                     />
                 </section>
             </main>
-            <Modal isOpen={isModalOpen} toggleModal={toggleModal}><ProjectDisplay projectInfo={currentProject} /></Modal>
+            <Modal isOpen={isProjectModalOpen} toggleModal={toggleProjectModal}><ProjectDisplay projectInfo={currentProject} /></Modal>
+            <Modal isOpen={isContactModalOpen} toggleModal={toggleContactModal}><ContactForm/></Modal>
         </>
     )
 }

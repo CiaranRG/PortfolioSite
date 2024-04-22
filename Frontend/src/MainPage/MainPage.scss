@@ -5,7 +5,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     overflow: hidden;
-
+    // Addin this to any section that we want to be snapped to
+    scroll-snap-align: start;
     .sectionHome {
         @include section-setup;
         .homeHeader {
@@ -47,6 +48,7 @@
             font-size: 0.8rem;
             font-weight: 700;
         }
+        scroll-snap-align: start;
     }
 
     .sectionProjects {
@@ -60,6 +62,7 @@
         min-height: 100vh;
         width: 100vw;
         gap: 2%;
+        scroll-snap-align: start;
     }
     @media (min-width: 576px) {
         .sectionHome{

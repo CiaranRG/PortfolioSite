@@ -34,9 +34,12 @@ p {
 
 // End of CSS Reset
 
-// Setting this up so it transitions smoothly from section to section
 html {
+  // Setting this up so it transitions smoothly from section to section
   scroll-behavior: smooth;
+  // We set this up to enable scroll snapping so that it snaps section to section
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
 // Doing this allows me to change just this here and it will change each individual thing instead of going one by one
@@ -66,7 +69,7 @@ $font-color: $color3;
   width: 100vw;
 }
 
-@mixin home-content{
+@mixin home-content {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
