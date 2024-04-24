@@ -12,29 +12,30 @@ import { faDatabase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import ContactForm from '../Components/ContactForm/ContactForm'
 
-export default function MainPage() {
+type MainPageProps = {
+    isContactModalOpen: boolean,
+    toggleContactModal: () => void,
+}
+
+type ProjectData = {
+    title: string;
+    description: {
+        intro: string,
+        middle: string,
+        tech: string,
+    }
+    imgUrl: string;
+    codeLink: string;
+    icons?: IconDefinition[];
+};
+
+export default function MainPage({isContactModalOpen, toggleContactModal}: MainPageProps) {
     const [isProjectModalOpen, setIsProjectModalOpen] = useState(false)
-    const [isContactModalOpen, setIsContactModalOpen] = useState(false)
     const [currentProject, setCurrentProject] = useState({ title: '', description: { intro: '', middle: '', tech: '' }, imgUrl: '', codeLink: '' })
 
     const toggleProjectModal = () => {
         setIsProjectModalOpen(!isProjectModalOpen)
     }
-    const toggleContactModal = () => {
-        setIsContactModalOpen(!isContactModalOpen)
-    }
-
-    type ProjectData = {
-        title: string;
-        description: {
-            intro: string,
-            middle: string,
-            tech: string,
-        }
-        imgUrl: string;
-        codeLink: string;
-        icons?: IconDefinition[];
-    };
 
     const handleProjectSelect = (projectData: ProjectData) => {
         setCurrentProject(projectData)

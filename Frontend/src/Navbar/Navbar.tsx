@@ -3,7 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
-export default function Navbar() {
+type NavbarProps = {
+    isContactModalOpen: boolean,
+    toggleContactModal: () => void,
+}
+
+
+export default function Navbar({isContactModalOpen, toggleContactModal}: NavbarProps) {
     // State to hold if the burger nav is open or closed
     const [isNavOpen, setIsNavOpen] = useState(false)
     // Creating a add class state to toggle classes on or off
@@ -23,6 +29,11 @@ export default function Navbar() {
         setAddClass(shouldBeColored);
     };
 
+
+    const toggleContactForm = (evt: React.MouseEvent<HTMLAnchorElement>) => {
+        evt.preventDefault()
+        toggleContactModal()
+    }
 
     useEffect(() => {
         // Setup an event listener, the event being scroll and then the function to execute
@@ -51,7 +62,7 @@ export default function Navbar() {
                             <a href="#home">Home</a>
                             <a href="#about">About</a>
                             <a href="#projects">Projects</a>
-                            <a href="">Contact</a>
+                            <a href="" onClick={toggleContactForm}>Contact</a>
                         </div>
                     )}
                 </div>
