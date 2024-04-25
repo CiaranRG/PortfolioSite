@@ -77,6 +77,14 @@
             .homeParagraph {
                 font-size: 1.2rem;
             }
+            .homeLogos{
+                .homeGithub{
+                    font-size: 2.5rem;
+                }
+                .homeEmail{
+                    font-size: 2.5rem;
+                }
+            }
         }
         .sectionAbout {
             h1{
@@ -100,6 +108,15 @@
     
             .homeParagraph {
                 font-size: 1.5rem;
+            }
+            .homeLogos{
+                gap: 100px;
+                .homeGithub{
+                    font-size: 2.75rem;
+                }
+                .homeEmail{
+                    font-size: 2.75rem;
+                }
             }
         }
         .sectionAbout {

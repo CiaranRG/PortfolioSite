@@ -29,7 +29,7 @@ type ProjectData = {
     icons?: IconDefinition[];
 };
 
-export default function MainPage({isContactModalOpen, toggleContactModal}: MainPageProps) {
+export default function MainPage({ isContactModalOpen, toggleContactModal }: MainPageProps) {
     const [isProjectModalOpen, setIsProjectModalOpen] = useState(false)
     const [currentProject, setCurrentProject] = useState({ title: '', description: { intro: '', middle: '', tech: '' }, imgUrl: '', codeLink: '' })
 
@@ -81,30 +81,30 @@ export default function MainPage({isContactModalOpen, toggleContactModal}: MainP
                 </section>
                 <section id='projects' className='sectionProjects'>
                     <div className='dummyDiv'></div>
-                    <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                    <ProjectPreview imgUrl={'../../public/WebsitePictures/SwapiApp.jpg'}
                         title={'Star Wars Api App'} description={'An app used to search for info about any star wars character from the swapi api'}
                         onClick={() => handleProjectSelect({
                             title: 'Star Wars Api App',
                             description: {
-                                intro: 'Intro',
-                                middle: 'Middle',
-                                tech: 'Tech Used'
+                                intro: 'This app queries the SWAPI api to display Star Wars information.',
+                                middle: 'This was my first real project after having reached the point I felt I needed to start making websites, Its a fully frontend application that interacts with the SWAPI api, it queries the api for things such as characters or planets etc, it also has added search functionality as the list can get quite long.',
+                                tech: 'The tech used here is quite light compared to some of my later projects but it does make use of Typescript and React, MaterialUI was also used to help with styling as I felt I needed to get an understanding on how these technologies worked.'
                             },
                             imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                             codeLink: 'https://github.com/CiaranRG/StaticSWAPISite',
                             icons: [faReact, faGithub],
                         })}
                     />
-                    <ProjectPreview imgUrl={'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'}
+                    <ProjectPreview imgUrl={'../../public/WebsitePictures/restaurantApp.jpg'}
                         title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'}
                         onClick={() => handleProjectSelect({
                             title: 'Restaurant App',
                             description: {
-                                intro: 'Intro',
-                                middle: 'Middle',
-                                tech: 'Tech Used'
+                                intro: 'This project is supposed to emulate a real world website you would see for a restaurant.',
+                                middle: 'The goal with this was to allow for people to be able to make accounts aswell as reservations to which they could then manage those reservations from within their account as well as other account settings.',
+                                tech: 'When it came to the tech that was used its much the same as my other projects, React and NodeJS with Typescript for type safety, the backend database being provided by PostgreSQL and SASS handling our CSS styling, Github was used for version control as well as some use case technology like BCrypt/Axios etc.'
                             },
-                            imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                            imgUrl: '../../public/WebsitePictures/restaurantApp.jpg',
                             codeLink: 'https://github.com/CiaranRG/RestaurantApp',
                             icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
@@ -114,9 +114,12 @@ export default function MainPage({isContactModalOpen, toggleContactModal}: MainP
                         onClick={() => handleProjectSelect({
                             title: 'Ecommerce App',
                             description: {
+                                // 70 Characters
                                 intro: 'This is an ecommerce app meant to simulate a real world clothing site.',
+                                // 106 Characters
                                 middle: 'I wanted to add in as much as I could to make it feel like something you would see by any big corporation.',
-                                tech: 'This was made in React with Vite and the backend was built with NodeJS, For our database we used PostgreSQL with SCSS being the main package for dealing with our styles, other niche use packages such as BCryp/Axios/FontAwesome etc.'
+                                // 231 Characters
+                                tech: 'This was made in React with Vite and the backend was built with NodeJS, For our database we used PostgreSQL with SCSS being the main package for dealing with our styles, other niche use packages such as BCrypt/Axios/FontAwesome etc.'
                             },
                             imgUrl: '../../public/WebsitePictures/ecommerceApp.jpg',
                             codeLink: 'https://github.com/CiaranRG/EcommerceApp',
@@ -126,7 +129,7 @@ export default function MainPage({isContactModalOpen, toggleContactModal}: MainP
                 </section>
             </main>
             <Modal isOpen={isProjectModalOpen} toggleModal={toggleProjectModal}><ProjectDisplay projectInfo={currentProject} /></Modal>
-            <Modal isOpen={isContactModalOpen} toggleModal={toggleContactModal}><ContactForm/></Modal>
+            <Modal isOpen={isContactModalOpen} toggleModal={toggleContactModal}><ContactForm /></Modal>
         </>
     )
 }
