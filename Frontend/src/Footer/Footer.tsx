@@ -5,10 +5,10 @@ export default function Footer(){
 
     return(
         <div className="footerDiv">
-            <div className='backToTopDiv'><Link to={'/'}>Back To Top</Link></div>
-            <div>
+            <div className='backToTopDiv'><Link to={'/'}>Back to top</Link></div>
+            {/* <div>
                 <p>Social Links</p>
-            </div>
+            </div> */}
         </div>
     )
 }
