@@ -26,12 +26,13 @@ type ProjectData = {
     }
     imgUrl: string;
     codeLink: string;
+    siteLink: string;
     icons?: IconDefinition[];
 };
 
 export default function MainPage({ isContactModalOpen, toggleContactModal }: MainPageProps) {
     const [isProjectModalOpen, setIsProjectModalOpen] = useState(false)
-    const [currentProject, setCurrentProject] = useState({ title: '', description: { intro: '', middle: '', tech: '' }, imgUrl: '', codeLink: '' })
+    const [currentProject, setCurrentProject] = useState({ title: '', description: { intro: '', middle: '', tech: '' }, imgUrl: '', codeLink: '', siteLink: '' })
 
     const toggleProjectModal = () => {
         setIsProjectModalOpen(!isProjectModalOpen)
@@ -92,6 +93,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                             },
                             imgUrl: 'https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                             codeLink: 'https://github.com/CiaranRG/StaticSWAPISite',
+                            siteLink: 'https://static-swapi-site.vercel.app',
                             icons: [faReact, faGithub],
                         })}
                     />
@@ -106,6 +108,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                             },
                             imgUrl: '../../public/WebsitePictures/restaurantApp.jpg',
                             codeLink: 'https://github.com/CiaranRG/RestaurantApp',
+                            siteLink: 'https://bella-cucina-frontend.vercel.app',
                             icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
                     />
@@ -123,6 +126,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                             },
                             imgUrl: '../../public/WebsitePictures/ecommerceApp.jpg',
                             codeLink: 'https://github.com/CiaranRG/EcommerceApp',
+                            siteLink: 'https://github.com/CiaranRG/EcommerceApp',
                             icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
                     />

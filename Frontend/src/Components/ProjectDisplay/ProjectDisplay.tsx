@@ -14,6 +14,7 @@ type projectInfoProps = {
             tech: string,
         },
         codeLink: string,
+        siteLink: string,
         imgUrl: string,
         icons?: IconDefinition[],
     }
@@ -42,7 +43,7 @@ export default function ProjectDisplay({ projectInfo }: projectInfoProps) {
                 ))}
             </div>
             <Link to={`${projectInfo.codeLink}`}>Visit Repository</Link>
-            <Link to={`${projectInfo.codeLink}`}>Visit Website</Link>
+            <Link to={`${projectInfo.siteLink}`}>Visit Website</Link>
         </div>
     )
 }
