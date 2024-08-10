@@ -73,7 +73,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                     </p>
                     <br />
                     <p>
-                        Moving forward, I aspire to develop top-level industry web applications, complete with all the "bells and whistles." I'm also keen on expanding my knowledge in web security and becoming versatile in various technologies to adapt to any situation. To stay at the cutting edge, I engage with tech communities on Reddit, YouTube, and Twitter.
+                        Moving forward, I aspire to develop top-level industry web applications, complete with all the bells and whistles. I'm also keen on expanding my knowledge in web security and becoming versatile in various technologies to adapt to any situation. To stay at the cutting edge, I engage with tech communities on Reddit, YouTube, and Twitter.
                     </p>
                     <br />
                     <p>
@@ -126,7 +126,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                             },
                             imgUrl: '../../public/WebsitePictures/ecommerceApp.jpg',
                             codeLink: 'https://github.com/CiaranRG/EcommerceApp',
-                            siteLink: 'https://github.com/CiaranRG/EcommerceApp',
+                            siteLink: 'https://ecommerce-app-frontend-seven.vercel.app',
                             icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
                     />
