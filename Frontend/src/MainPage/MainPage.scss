@@ -7,8 +7,10 @@
     overflow: hidden;
     // Addin this to any section that we want to be snapped to
     scroll-snap-align: start;
+
     .sectionHome {
         @include section-setup;
+
         .homeHeader {
             font-size: 3rem;
             font-weight: 700;
@@ -23,17 +25,20 @@
         .homeParagraph {
             font-size: 1rem;
         }
-        .homeLogos{
+
+        .homeLogos {
             display: flex;
             justify-content: center;
             width: 100%;
             gap: 20%;
             padding: 10px 0px 0px 0px;
-            .homeGithub{
+
+            .homeGithub {
                 color: white;
                 font-size: 2rem;
             }
-            .homeEmail{
+
+            .homeEmail {
                 color: white;
                 font-size: 2rem;
                 background: transparent;
@@ -44,11 +49,12 @@
 
     .sectionAbout {
         @include section-setup;
-        p{
+        scroll-snap-align: start;
+
+        p {
             font-size: 0.8rem;
             font-weight: 700;
         }
-        scroll-snap-align: start;
     }
 
     .sectionProjects {
@@ -64,98 +70,112 @@
         gap: 2%;
         scroll-snap-align: start;
     }
+
     @media (min-width: 576px) {
-        .sectionHome{
+        .sectionHome {
             .homeHeader {
                 font-size: 4rem;
             }
-    
+
             .homeSubheader {
                 font-size: 1.5rem;
             }
-    
+
             .homeParagraph {
                 font-size: 1.2rem;
             }
-            .homeLogos{
-                .homeGithub{
+
+            .homeLogos {
+                .homeGithub {
                     font-size: 2.5rem;
                 }
-                .homeEmail{
+
+                .homeEmail {
                     font-size: 2.5rem;
                 }
             }
         }
+
         .sectionAbout {
-            h1{
+            h1 {
                 font-size: 2rem;
             }
-            p{
+
+            p {
                 font-size: 1rem;
             }
         }
     }
 
     @media (min-width: 768px) {
-        .sectionHome{
+        .sectionHome {
             .homeHeader {
                 font-size: 5rem;
             }
-    
+
             .homeSubheader {
                 font-size: 2rem;
             }
-    
+
             .homeParagraph {
                 font-size: 1.5rem;
             }
-            .homeLogos{
+
+            .homeLogos {
                 gap: 100px;
-                .homeGithub{
+
+                .homeGithub {
                     font-size: 2.75rem;
                 }
-                .homeEmail{
+
+                .homeEmail {
                     font-size: 2.75rem;
                 }
             }
         }
+
         .sectionAbout {
-            h1{
+            h1 {
                 font-size: 2.5rem;
             }
-            p{
+
+            p {
                 font-size: 1.1rem;
             }
         }
     }
 
     @media (min-width: 992px) {
-        .sectionHome{
+        .sectionHome {
             .homeHeader {
                 font-size: 6rem;
             }
-    
+
             .homeSubheader {
                 font-size: 2.5rem;
             }
-    
+
             .homeParagraph {
                 font-size: 1.7rem;
             }
         }
+
         .sectionAbout {
-            h1{
+            h1 {
                 font-size: 3rem;
             }
-            p{
+
+            p {
                 font-size: 1.2rem;
             }
         }
-        .sectionProjects{
+
+        .sectionProjects {
             display: flex;
             flex-direction: row;
             gap: 5%;
-            .previewDiv{
+
+            .previewDiv {
                 width: 350%;
                 height: 50%;
             }
@@ -163,39 +183,42 @@
     }
 
     @media (min-width: 1200px) {
-        .sectionHome{
+        .sectionHome {
             .homeHeader {
                 font-size: 7rem;
             }
-    
+
             .homeSubheader {
                 font-size: 3rem;
             }
-    
+
             .homeParagraph {
                 font-size: 2rem;
             }
         }
     }
+
     @media (min-width: 1400px) {
-        .sectionHome{
+        .sectionHome {
             .homeHeader {
                 font-size: 7rem;
             }
-    
+
             .homeSubheader {
                 font-size: 3rem;
             }
-    
+
             .homeParagraph {
                 font-size: 2rem;
             }
         }
+
         .sectionAbout {
-            h1{
+            h1 {
                 font-size: 4rem;
             }
-            p{
+
+            p {
                 font-size: 1.5rem;
             }
         }

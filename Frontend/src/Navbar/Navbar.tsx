@@ -4,12 +4,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
 type NavbarProps = {
-    isContactModalOpen: boolean,
     toggleContactModal: () => void,
 }
 
 
-export default function Navbar({isContactModalOpen, toggleContactModal}: NavbarProps) {
+export default function Navbar({ toggleContactModal }: NavbarProps) {
     // State to hold if the burger nav is open or closed
     const [isNavOpen, setIsNavOpen] = useState(false)
     // Creating a add class state to toggle classes on or off

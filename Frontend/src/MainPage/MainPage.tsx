@@ -82,7 +82,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                 </section>
                 <section id='projects' className='sectionProjects'>
                     <div className='dummyDiv'></div>
-                    <ProjectPreview imgUrl={'../../public/WebsitePictures/SwapiApp.jpg'}
+                    <ProjectPreview imgUrl={'https://raw.githubusercontent.com/CiaranRG/PortfolioSite/main/Frontend/public/WebsitePictures/SwapiApp.jpg'}
                         title={'Star Wars Api App'} description={'An app used to search for info about any star wars character from the swapi api'}
                         onClick={() => handleProjectSelect({
                             title: 'Star Wars Api App',
@@ -97,7 +97,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                             icons: [faReact, faGithub],
                         })}
                     />
-                    <ProjectPreview imgUrl={'../../public/WebsitePictures/restaurantApp.jpg'}
+                    <ProjectPreview imgUrl={'https://raw.githubusercontent.com/CiaranRG/PortfolioSite/main/Frontend/public/WebsitePictures/restaurantApp.jpg'}
                         title={'Restaurant App'} description={'Mock restaurant website with account/reservation CRUD'}
                         onClick={() => handleProjectSelect({
                             title: 'Restaurant App',
@@ -112,7 +112,7 @@ export default function MainPage({ isContactModalOpen, toggleContactModal }: Mai
                             icons: [faReact, faNodeJs, faGithub, faDatabase, faSass],
                         })}
                     />
-                    <ProjectPreview imgUrl={'../../public/WebsitePictures/ecommerceApp.jpg'}
+                    <ProjectPreview imgUrl={'https://raw.githubusercontent.com/CiaranRG/PortfolioSite/main/Frontend/public/WebsitePictures/ecommerceApp.jpg'}
                         title={'Ecommerce App'} description={'Meant to simulate a real world clothing shop website'}
                         onClick={() => handleProjectSelect({
                             title: 'Ecommerce App',

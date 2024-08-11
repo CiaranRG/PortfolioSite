@@ -11,14 +11,14 @@ function App() {
 
   const toggleContactModal = () => {
     setIsContactModalOpen(!isContactModalOpen)
-}
+  }
 
   return (
     <>
       <Router>
-        <Navbar toggleContactModal={toggleContactModal} isContactModalOpen={isContactModalOpen}/>
+        <Navbar toggleContactModal={toggleContactModal} />
         <Routes>
-          <Route path='/' element={<MainPage toggleContactModal={toggleContactModal} isContactModalOpen={isContactModalOpen}/>} />
+          <Route path='/' element={<MainPage toggleContactModal={toggleContactModal} isContactModalOpen={isContactModalOpen} />} />
         </Routes>
         <Footer />
       </Router>
