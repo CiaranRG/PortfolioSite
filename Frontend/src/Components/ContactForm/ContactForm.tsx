@@ -28,23 +28,17 @@ export default function ContactForm() {
         <>
             <div className="contactFormBg" onClick={handleModalClick}>
                 <h1>Contact Me!</h1>
-                <form onSubmit={handleSubmit}>
-                    <div className='contactSection'>
-                        <label htmlFor='name'>Name</label>
-                        <input type="text" value={formInfo.name} id='name' name='name' onChange={handleChange} placeholder='Name' required />
-                    </div>
-                    <div className='contactSection'>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" value={formInfo.email} id='email' name='email' onChange={handleChange} placeholder='Email' required />
-                        <ValidationError prefix="Email" field="email" errors={state.errors} />
-                    </div>
-                    <div className='contactSection'>
-                        <label htmlFor="message">Message</label>
-                        <textarea cols={30} rows={5} value={formInfo.message} id="message" name='message' onChange={handleChange} required></textarea>
-                        <ValidationError prefix="Message" field="message" errors={state.errors} />
-                    </div>
+                <form onSubmit={handleSubmit} className='contactForm'>
+                    <label htmlFor='name' className='nameLabel'>Name</label>
+                    <input type="text" value={formInfo.name} id='name' name='name' onChange={handleChange} placeholder='Name' required />
+                    <label htmlFor="email">Email</label>
+                    <input type="email" value={formInfo.email} id='email' name='email' onChange={handleChange} placeholder='Email' required />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
+                    <label htmlFor="message">Message</label>
+                    <textarea cols={30} rows={5} value={formInfo.message} id="message" name='message' onChange={handleChange} required></textarea>
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
                     <div className="contactButtonDiv">
-                        <button type='submit' className='contactSubmit' disabled={state.submitting}>Submit</button>
+                        <button type='submit' className='contactSubmit' disabled={state.submitting}> {state.submitting ? 'Submitting...' : 'Submit'}</button>
                     </div>
                 </form>
             </div>
