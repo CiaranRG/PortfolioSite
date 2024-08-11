@@ -8,23 +8,24 @@
     border: 2px solid $color3;
     background-color: $color2;
     border-radius: 10px;
-    width: 90vw;
+    width: 80vw;
     padding: 40px 10px 40px 10px;
     gap: 30px;
     font-size: 1rem;
 
-    // height: 50vh;
-    .contactSection {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-
+    .contactForm {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0px 10px 0px 10px;
+        width: 100%;
         label {
             margin-top: 10px;
             font-size: 1.2rem;
             font-weight: 700;
+            margin: 20px 0px 10px 0px;
+        }
+        .nameLabel{
+            margin-top: 0px;
         }
 
         input {
@@ -44,38 +45,59 @@
             color: $color3;
             background-color: $color2;
         }
-    }
 
-    .contactButtonDiv {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
+        .contactButtonDiv {
+            display: grid;
+            margin-top: 30px;
+            grid-template-columns: 1fr;
 
-        button {
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 8px 12px 8px 12px;
-            border-radius: 10px;
-            border: 2px solid $color3;
-            background-color: transparent;
-            color: $color3;
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 12px 12px 12px 12px;
+                border-radius: 10px;
+                border: 2px solid $color3;
+                background-color: transparent;
+                color: $color3;
+            }
+            button:hover{
+                cursor: pointer;
+            }
         }
     }
-    @media (min-width: 576px){
-        width: 80vw;     
+}
+
+
+@media (min-width: 576px) {
+    .contactFormBg {
+        width: 50vw;
     }
-    @media (min-width: 768px){
-        width: 60vw;     
+}
+
+@media (min-width: 768px) {
+    .contactFormBg {
+        width: 40vw;
     }
-    @media (min-width: 992px){
-        width: 50vw;     
+}
+
+@media (min-width: 992px) {
+    .contactFormBg {
+        width: 30vw;
     }
-    @media (min-width: 1200px){
-        width: 40vw;     
+}
+
+@media (min-width: 1200px) {
+    .contactFormBg {
+        width: 30vw;
     }
-    @media (min-width: 1400px){
-        width: 30vw;  
+}
+
+@media (min-width: 1400px) {
+    .contactFormBg {
+        width: 30vw;
     }
 }
 
